@@ -27,7 +27,7 @@ Your role:
 6. When recommending products, mention their name, fabric, and price naturally.
 7. If asked about something outside fashion/our products, gently redirect to shopping.`;
 
-const GEMINI_KEY = "AIzaSyC1HfaOvAd1u_3wT4SO1t-PA0wDvOahFrc";
+const GEMINI_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 async function callGemini(history: Message[], userText: string, attempt = 0): Promise<string> {
   const contents = [
